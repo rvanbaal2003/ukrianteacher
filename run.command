@@ -15,7 +15,7 @@ echo "Installing requirements..."
 pip install -r requirements.txt
 
 # Set OpenAI API Key (vervang met jouw key!)
-export OPENAI_API_KEY='sk-jouw-api-key-hier'
+export OPENAI_API_KEY= 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
 
 # Check if API key is set
 if [ "$OPENAI_API_KEY" = "sk-jouw-api-key-hier" ]; then
