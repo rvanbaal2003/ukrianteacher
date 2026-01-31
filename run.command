@@ -14,15 +14,18 @@ source venv/bin/activate
 echo "Installing requirements..."
 pip install -r requirements.txt
 
-# Check if OPENAI_API_KEY is set
-if [ -z "$OPENAI_API_KEY" ]; then
+# Set OpenAI API Key (vervang met jouw key!)
+export OPENAI_API_KEY='sk-jouw-api-key-hier'
+
+# Check if API key is set
+if [ "$OPENAI_API_KEY" = "sk-jouw-api-key-hier" ]; then
     echo ""
-    echo "⚠️  WAARSCHUWING: OPENAI_API_KEY is niet ingesteld!"
-    echo "Zet deze in met: export OPENAI_API_KEY='jouw-api-key'"
+    echo "⚠️  BELANGRIJK: Vervang 'sk-jouw-api-key-hier' met je echte OpenAI API key!"
+    echo "   Edit dit bestand (run.command) en zet je API key op regel 18"
     echo ""
-    read -p "Druk op Enter om door te gaan..."
+    read -p "Druk op Enter om toch door te gaan..."
 fi
 
 # Run the app
 echo "Starting Oekraïense AI Leraar..."
-python -m streamlit run app.py
+streamlit run app.py
